@@ -3,10 +3,16 @@ function calc() {
 let calculator = document.querySelector("#container");
 
 calculator.addEventListener("click", function(evt){
-  console.log("click goes the dynamite");
-  console.log(evt.target.textContent);
-  let output = document.querySelector("#output p");
+  console.log(evt);
+  let output = document.querySelector("#output");
+
+  if (evt.target.id === "clear") {
+    output.textContent = "";
+  }
+  else {
+  /*  PUTS ANYTHING CLICKED INTO THE OUTPUT  */
   output.textContent += evt.target.textContent;
+}
 });
 }
 
