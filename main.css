@@ -1,0 +1,83 @@
+body {
+  background-color: grey;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 500px;
+  margin: 150px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  font-size: 2.5em;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#container div {
+  background-color: #61B34F;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  height: 100px;
+  width: 100px;
+  line-height: 2.5em;
+  box-shadow: 15px 15px 15px black;
+}
+
+#container #output {
+  width: 302px;
+}
+
+#container #divide,
+#container #multiply,
+#container #subtract,
+#container #plus {
+  background-color: #82C276;
+  color: #000;
+}
+
+#container #divide:hover,
+#container #multiply:hover,
+#container #subtract:hover,
+#container #plus:hover {
+  color: #fff;
+}
+
+#clear:hover,
+#equals:hover {
+  background-color: #82C276;
+}
+
+#container #divide,
+#container #multiply,
+#container #subtract,
+#container #plus,
+#container #output {
+  border-right: none;
+}
+
+#container #zero,
+#container #decimal,
+#container #equals,
+#container #plus {
+  border-bottom: none;
+}
+
+#clear {
+  border-top-left-radius: 20px;
+}
+#output {
+  border-top-right-radius: 20px;
+}
+#zero {
+  border-bottom-left-radius: 20px;
+}
+#plus {
+  border-bottom-right-radius: 20px;
+}
