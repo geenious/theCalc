@@ -5,17 +5,19 @@ let num1;
 let num2;
 let operator = "";
 let equation = num1 + operator + num2;
+let isFirstCharacter = true;
 
-function hardClear() {
-  output.textContent = "";
-  num1 = "";
-  num2 = "";
-  operator = "";
-}
+  function hardClear() {
+    output.textContent = "";
+    num1 = "";
+    num2 = "";
+    operator = "";
+    isFirstCharacter = true;
+  }
 
-function clear() {
-  output.textContent = "";
-}
+  function clear() {
+    output.textContent = "";
+  }
 
 calculator.addEventListener("click", function(evt){
   console.log(evt);
@@ -46,10 +48,14 @@ calculator.addEventListener("click", function(evt){
     else if (operator === "/") {
       output.textContent = num1 / num2;
     }
+    isFirstCharacter = true;
   }
   else if (operator.length > 0) {
-    clear();
-    output.textContent = Number(evt.target.textContent);
+    if (isFirstCharacter) {
+      clear();
+      isFirstCharacter = false;
+    }
+    output.textContent += Number(evt.target.textContent);
     num2 = Number(output.textContent);
     console.log("Second number: ", num2);
     console.log(`Our equation to solve is: ${num1} ${operator} ${num2}`);
